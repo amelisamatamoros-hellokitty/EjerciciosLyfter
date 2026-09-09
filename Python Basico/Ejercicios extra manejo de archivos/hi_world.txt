@@ -1,0 +1,6 @@
+Hola
+mundo
+esto
+es
+Python
+This is a new register
