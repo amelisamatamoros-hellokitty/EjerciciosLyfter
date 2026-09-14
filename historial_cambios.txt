@@ -1,0 +1,28 @@
+Amelisas-MacBook-Air:EjerciciosLyfter amelisamatamoros$ git log
+commit 8f143cbda009c1a3d110e03af9300e51bc9085b2 (HEAD -> main, origin/main, origin/HEAD)
+Merge: d8f4c87 7f08e51
+Author: amelisamatamoros-hellokitty <amelisamatamoros@gmail.com>
+Date:   Mon Sep 14 04:29:38 2026 -0600
+
+    Merge pull request #3 from amelisamatamoros-hellokitty/Past-Exercises
+    
+    Creation of Past-Exercises branch
+
+//merge de los cambios en past-exercises se le agregaron a la rama main
+
+commit 7f08e51a88bdf534a86ce0d825e362cf06f681f1 (origin/Past-Exercises, origin/Ejercicios-Listos, Past-Exercises)
+Author: Amelisa <amelisamatamoros@gmail.com>
+Date:   Thu Sep 10 21:12:47 2026 -0600
+
+    Nuevo nombre
+
+// Cambio de nombre de la rama de Ejercicios-Listos a Past-Exercises
+
+commit d8f4c87533469f6e6704c104f908bb2cefcc8734
+Author: Amelisa <amelisamatamoros@gmail.com>
+Date:   Thu Sep 10 21:09:29 2026 -0600
+
+    Nuevo nombre
+:
+
+// commit padre el siguiente commit
