@@ -1,7 +1,7 @@
 import re
 
 
-def is_valid_name(name):
+def invalid_name(name):
     valid_name=any(caracter.isdigit() for caracter in name) or name==''or name.isspace()
     return valid_name
 
@@ -19,10 +19,11 @@ def student_exists(student_list,student_name,student_section):
         return False
 
     
+student_list=[]
 
 def menu_option1():
-    student_list=[]
     
+
     while True:
         try:
             student_number=int(input("How many students you want to submit?  "))
@@ -42,7 +43,7 @@ def menu_option1():
             while True:
                 try:    
                     student['name']=input(f"Submit student no. {index}'s complete name   ")
-                    student_name=is_valid_name(student['name'])
+                    student_name=invalid_name(student['name'])
                     if student_name==False:
                         break
                     else:
@@ -120,8 +121,9 @@ def menu_option2(student_list):
     if student_list==[]:
         print('Your student list is empty, we can not action this option')
     else:
-        print(f'this is the list of students in your control system: {student_list}')
-    
+        print(f'this is the list of students in your control system:')
+        for student in student_list:
+            print(f'Name: {student['name']}, Section: {student['section']}, Spanish note: {student['spanish note']}, English note: {student['english note']}, Socials Note: {student['socials note']}, Science Note:{student['science note']}')
     
 def menu_option3(student_list):
     average_list={}
