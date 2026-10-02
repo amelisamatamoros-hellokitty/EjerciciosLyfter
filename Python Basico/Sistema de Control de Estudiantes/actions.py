@@ -2,13 +2,13 @@ import re
 
 
 def invalid_name(name):
-    valid_name=any(caracter.isdigit() for caracter in name) or name==''or name.isspace()
+    valid_name=any(character.isdigit() for character in name) or name==''or name.isspace()
     return valid_name
 
 
 def is_valid_section(section):
-    patron = r'^\d{2}[A-Za-z]$'
-    return bool(re.match(patron, section))
+    pattern = r'^\d{2}[A-Za-z]$'
+    return bool(re.match(pattern, section))
 
 
 def student_exists(student_list,student_name,student_section):
@@ -19,10 +19,8 @@ def student_exists(student_list,student_name,student_section):
         return False
 
     
-student_list=[]
 
-def menu_option1():
-    
+def add_student(student_list):  
 
     while True:
         try:
@@ -117,7 +115,7 @@ def menu_option1():
     return student_list  
 
 
-def menu_option2(student_list):
+def view_students(student_list):
     if student_list==[]:
         print('Your student list is empty, we can not action this option')
     else:
@@ -125,7 +123,7 @@ def menu_option2(student_list):
         for student in student_list:
             print(f'Name: {student['name']}, Section: {student['section']}, Spanish note: {student['spanish note']}, English note: {student['english note']}, Socials Note: {student['socials note']}, Science Note:{student['science note']}')
     
-def menu_option3(student_list):
+def top_3_averages(student_list):
     average_list={}
     for student in student_list:
         average_list[student['name']+ "-"+ student['section']]=(int(student['spanish note'])+int(student['english note'])+int(student['socials note'])+int(student['science note']))/4
@@ -135,7 +133,7 @@ def menu_option3(student_list):
         print(name, average)
 
     
-def menu_option4(student_list):
+def average_grades(student_list):
     average_list={}
     for student in student_list:
         average_list[student['name']+ "-"+ student['section']]=(int(student['spanish note'])+int(student['english note'])+int(student['socials note'])+int(student['science note']))/4
@@ -144,7 +142,7 @@ def menu_option4(student_list):
         print(name, average)
 
             
-def menu_option7(student_list):
+def delete_student(student_list):
     student_to_erase=input("What is the name of the person you want to delete? ")
     student_section=input("What is the section of the person you want to delete? ")
     for student in student_list:
@@ -169,7 +167,7 @@ def menu_option7(student_list):
         print(f"Student{student_to_erase} was not found in the Control System")            
 
     
-def menu_option8(student_list):
+def failed_students(student_list):
     for student in student_list:
         if int(student['spanish note'])<60:
             print(f'{student['name']} from section {student['section']} failed the Spanish class with {student['spanish note']}')
@@ -181,5 +179,5 @@ def menu_option8(student_list):
             print(f'{student['name']} from section {student['section']} failed the Science class with {student['science note']}')     
 
     
-def menu_option9():
+def exit_program():
     print("You have exited the Control System, have a good day!")
