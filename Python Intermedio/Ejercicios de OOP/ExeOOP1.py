@@ -6,7 +6,7 @@ class Circle:
         self.radius=radius
 
     def get_area(self,radius):
-        area=math.pi*(self.radius**2)
+        area=math.pi*(radius**2)
         return area
 
 radius_1=Circle(float(input("Enter a radius in meters for the circle:  ")))
