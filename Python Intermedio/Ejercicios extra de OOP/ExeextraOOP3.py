@@ -14,9 +14,8 @@ class Inventory:
 
 
     def show_products(self):
-        for item in range(0,len(self.product_list)):
-            product=self.product_list[item]
-            print(f"Product {item+1}: {product.name}")
+        for item,product in enumerate(self.product_list):
+            print(f"Product {item+1}: {product.name}, 'Price {product.price}', 'Quantity: {product.quantity}")
 
 
     def total_value_inventory(self):
@@ -33,6 +32,6 @@ inventory_1=Inventory()
 inventory_1.add_product(product_1)
 inventory_1.add_product(product_2)
 inventory_1.show_products()
-print(inventory_1.total_value_inventory())
+print(f'Total inventory value: {inventory_1.total_value_inventory()}')
 
 
