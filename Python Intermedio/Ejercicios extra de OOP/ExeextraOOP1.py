@@ -13,7 +13,7 @@ class Rectangle:
         try:
             value=int(value)
         except:
-            raise TypeError("Height and Width must numbers")
+            raise TypeError("Height and Width must be numbers")
         if value<0:
             raise ValueError("The width can't be a negative number")
         
