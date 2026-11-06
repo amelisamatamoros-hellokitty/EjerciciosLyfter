@@ -14,7 +14,7 @@ class AdminUser(User):
     def __init__(self,name):
         self.name=name
 
-    def get_role():
+    def get_role(self):
         return "admin"
 
     def has_permission(self,permission):
@@ -24,7 +24,7 @@ class RegularUser(User):
     def __init__(self,name):
         self.name=name
 
-    def get_role():
+    def get_role(self):
         return "regular"
 
     def has_permission(self,permission):

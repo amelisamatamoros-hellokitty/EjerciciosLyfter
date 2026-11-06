@@ -1,11 +1,12 @@
 class Vehicle:
     
     def __init__(self, brand, year):
-        self.brand=brand
-        self.year=year
+        self._brand=brand
+        self._year=year
+
 
     def get_info(self):
-        return f" {self.brand} ({self.year})"
+        return f" {self._brand} ({self._year})"
 
 class Car(Vehicle):
     
